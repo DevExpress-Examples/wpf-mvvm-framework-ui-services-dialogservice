@@ -4,7 +4,7 @@
 * [MainView.xaml](./CS/View/MainView.xaml) (VB: [MainView.xaml](./VB/View/MainView.xaml))
 * [RegistrationView.xaml](./CS/View/RegistrationView.xaml) (VB: [RegistrationView.xaml](./VB/View/RegistrationView.xaml))
 * [MainViewModel.cs](./CS/ViewModel/MainViewModel.cs) (VB: [MainViewModel.vb](./VB/ViewModel/MainViewModel.vb))
-* [RegistrationViewModel.cs](./CS/ViewModel/RegistrationViewModel.cs) (VB: [RegistrationViewModel.vb](./VB/ViewModel/RegistrationViewModel.vb))
+* [RegistrationViewModel.cs](./CS/ViewModel/RegistrationViewModel%20.cs) (VB: [RegistrationViewModel.vb](./VB/ViewModel/RegistrationViewModel%20.vb))
 <!-- default file list end -->
 
 # How to: Use DialogService
