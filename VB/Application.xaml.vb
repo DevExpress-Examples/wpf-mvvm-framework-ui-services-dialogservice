@@ -5,7 +5,7 @@ Namespace Example
 		Inherits Application
 
 		Public Sub New()
-			AddHandler Startup, AddressOf OnStartup
+			AddHandler Me.Startup, AddressOf OnStartup
 		End Sub
 		Private Overloads Sub OnStartup(ByVal sender As Object, ByVal e As StartupEventArgs)
 			MainWindow = New MainWindow()
