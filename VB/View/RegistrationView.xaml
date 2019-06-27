@@ -1,11 +1,8 @@
 <UserControl x:Class="Example.View.RegistrationView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                         
-             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-             xmlns:ViewModel="clr-namespace:Example.ViewModel"
-             >
-
-    <StackPanel HorizontalAlignment="Center"
+             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm">
+        <StackPanel HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Orientation="Horizontal">
         <TextBlock VerticalAlignment="Center" Text="User Name: " />

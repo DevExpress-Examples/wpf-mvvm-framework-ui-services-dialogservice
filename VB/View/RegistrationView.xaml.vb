@@ -1,11 +1,11 @@
 ﻿Imports System.Windows.Controls
 
 Namespace Example.View
-    Partial Public Class RegistrationView
-        Inherits UserControl
+	Partial Public Class RegistrationView
+		Inherits UserControl
 
-        Public Sub New()
-            InitializeComponent()
-        End Sub
-    End Class
+		Public Sub New()
+			InitializeComponent()
+		End Sub
+	End Class
 End Namespace
