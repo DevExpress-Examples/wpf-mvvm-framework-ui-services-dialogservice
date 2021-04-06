@@ -21,6 +21,7 @@
                 </Style>
             </dx:DialogService.DialogStyle>
         </dx:DialogService>
+        <dx:DXMessageBoxService/>
     </dxmvvm:Interaction.Behaviors>
 
     <Grid x:Name="LayoutRoot" Background="White">
