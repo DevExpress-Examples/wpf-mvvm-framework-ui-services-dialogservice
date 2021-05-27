@@ -1,4 +1,4 @@
-<UserControl x:Class="Example.View.MainView"
+﻿<UserControl x:Class="Example.View.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"             
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
@@ -21,6 +21,7 @@
                 </Style>
             </dx:DialogService.DialogStyle>
         </dx:DialogService>
+        <dx:DXMessageBoxService/>
     </dxmvvm:Interaction.Behaviors>
 
     <Grid x:Name="LayoutRoot" Background="White">
