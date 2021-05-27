@@ -7,42 +7,26 @@ Imports System.Diagnostics
 Imports System.Windows
 
 Namespace Example.ViewModel
-	Public Class MainViewModel
-		Protected ReadOnly Property DialogService() As IDialogService
-			Get
-				Return Me.GetService(Of IDialogService)()
-			End Get
-		End Property
-		Private registrationViewModel As RegistrationViewModel = Nothing
-		Public Sub ShowRegistrationForm()
-			If registrationViewModel Is Nothing Then
-				registrationViewModel = New RegistrationViewModel()
-			End If
-
-			Dim registerCommand As New UICommand(id:= Nothing, caption:= "Register", command:= New DelegateCommand(Of CancelEventArgs)(Sub(cancelArgs)
-				Try
-					myExecuteMethod()
-				Catch e As Exception
-					Me.GetService(Of IMessageBoxService)().ShowMessage(e.Message, "Error", MessageButton.OK)
-					cancelArgs.Cancel = True
-				End Try
-			End Sub, cancelArgs{get{Return Not String.IsNullOrEmpty(registrationViewModel.UserName)), isDefault:= True, isCancel:= False)
-		End Sub
-	End Class
-
-			Private cancelCommand As New UICommand(id:= MessageBoxResult.Cancel, caption:= "Cancel", command:= Nothing, isDefault:= False, isCancel:= True)
-
-			Private result As UICommand = DialogService.ShowDialog(dialogCommands:= New List(Of UICommand)() From {registerCommand, cancelCommand}, title:= "Registration Dialog", viewModel:= registrationViewModel)
-
-			If result = registerCommand Then
-				'...
-			End If
+    Public Class MainViewModel
+        Protected Overridable ReadOnly Property DialogService() As IDialogService
+            Get
+                Return Nothing
+            End Get
+        End Property
+        Private registrationViewModel As RegistrationViewModel = Nothing
+        Public Sub ShowRegistrationForm()
+            If registrationViewModel Is Nothing Then
+                registrationViewModel = New RegistrationViewModel()
+            End If
+            Dim registerCommand As New UICommand() With {.Caption = "Register", .IsCancel = False, .IsDefault = True, .Command = New DelegateCommand(Of CancelEventArgs)(Sub(x) myExecuteMethod(), Function(x) (Not String.IsNullOrEmpty(registrationViewModel.UserName)))}
+            Dim cancelCommand As New UICommand() With {.Id = MessageBoxResult.Cancel, .Caption = "Cancel", .IsCancel = True, .IsDefault = False}
+            Dim result As UICommand = DialogService.ShowDialog(dialogCommands:=New List(Of UICommand)() From {registerCommand, cancelCommand}, title:="Registration Dialog", viewModel:=registrationViewModel)
+            If result Is registerCommand Then
+                '...
+            End If
+        End Sub
+        Private Sub myExecuteMethod()
+            Debug.Print("Registration complete")
+        End Sub
+    End Class
 End Namespace
-
-'INSTANT VB TODO TASK: Local functions are not converted by Instant VB:
-'		private void myExecuteMethod()
-'		{
-'			Debug.Print("Registration complete");
-'		}
-	}
-}
