@@ -1,7 +1,7 @@
-﻿using System.Windows;
+﻿using DevExpress.Xpf.Core;
 
 namespace Example {
-    public partial class MainWindow : Window {
+    public partial class MainWindow : ThemedWindow {
         public MainWindow() {
             InitializeComponent();
         }

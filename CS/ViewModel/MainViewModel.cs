@@ -1,29 +1,33 @@
 using DevExpress.Mvvm;
-using DevExpress.Mvvm.POCO;
+using DevExpress.Mvvm.DataAnnotations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Windows;
 
 namespace Example.ViewModel {
-    public class MainViewModel {
-        protected IDialogService DialogService { get { return this.GetService<IDialogService>(); } }
-        RegistrationViewModel registrationViewModel = null;
-        public void ShowRegistrationForm() {
-            if(registrationViewModel == null)
-                registrationViewModel = new RegistrationViewModel();
+    public class MainViewModel : ViewModelBase {
+        RegistrationViewModel registrationViewModel;
 
+        IMessageBoxService MessageBoxService { get { return GetService<IMessageBoxService>(); } }
+        IDialogService DialogService { get { return GetService<IDialogService>(); } }
+
+        public MainViewModel() {
+            registrationViewModel = new RegistrationViewModel();
+        }
+
+        [Command]
+        public void ShowRegistrationForm() {
             UICommand registerCommand = new UICommand(
                 id: null,
                 caption: "Register",
                 command: new DelegateCommand<CancelEventArgs>(
                     cancelArgs => {
                         try {
-                            myExecuteMethod();
+                            MyExecuteMethod();
                         }
                         catch (Exception e) {
-                            this.GetService<IMessageBoxService>().ShowMessage(e.Message, "Error", MessageButton.OK);
+                            MessageBoxService.ShowMessage(e.Message, "Error", MessageButton.OK);
                             cancelArgs.Cancel = true;
                         }
                     },
@@ -47,13 +51,13 @@ namespace Example.ViewModel {
                 viewModel: registrationViewModel
             );
 
-            if (result == registerCommand) {
-                //...
+            if(result == registerCommand) {
+                // ...
             }
         }
 
-        private void myExecuteMethod() {
-            Debug.Print("Registration complete");
+        void MyExecuteMethod() {
+            // ...
         }
     }
 }

@@ -1,5 +1,10 @@
-﻿namespace Example.ViewModel {
-    public class RegistrationViewModel {
-        public virtual string UserName { get; set; }
+﻿using DevExpress.Mvvm;
+
+namespace Example.ViewModel {
+    public class RegistrationViewModel : ViewModelBase {
+        public string UserName {
+            get { return GetValue<string>(); }
+            set { SetValue(value); }
+        }
     }
 }
