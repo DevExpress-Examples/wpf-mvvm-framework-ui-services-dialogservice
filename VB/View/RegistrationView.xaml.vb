@@ -1,7 +1,8 @@
-﻿Imports System.Windows.Controls
+Imports System.Windows.Controls
 
 Namespace Example.View
-    Partial Public Class RegistrationView
+
+    Public Partial Class RegistrationView
         Inherits UserControl
 
         Public Sub New()
