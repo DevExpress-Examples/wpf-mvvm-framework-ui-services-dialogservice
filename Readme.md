@@ -7,16 +7,14 @@
 
 This example demonstrates how you can use the [DialogService](https://docs.devexpress.com/WPF/17467/mvvm-framework/services/predefined-set/dialog-services/dialogservice) to show a modal dialog window ([ThemedWindow](https://docs.devexpress.com/WPF/DevExpress.Xpf.Core.ThemedWindow)) and get its result.
 
-![image](https://user-images.githubusercontent.com/12169834/183627076-c2856061-1569-4b8f-ad7d-5a62540bdbb8.png)
+![image](https://user-images.githubusercontent.com/65009440/192302108-ebce49d2-942d-4c70-a480-b49c5620a220.png)
 
-<!-- default file list -->
-## Files to Look At
+## Files to Review
 
 * [MainView.xaml](./CS/View/MainView.xaml) (VB: [MainView.xaml](./VB/View/MainView.xaml))
 * [RegistrationView.xaml](./CS/View/RegistrationView.xaml) (VB: [RegistrationView.xaml](./VB/View/RegistrationView.xaml))
 * [MainViewModel.cs](./CS/ViewModel/MainViewModel.cs) (VB: [MainViewModel.vb](./VB/ViewModel/MainViewModel.vb))
 * [RegistrationViewModel.cs](./CS/ViewModel/RegistrationViewModel%20.cs) (VB: [RegistrationViewModel.vb](./VB/ViewModel/RegistrationViewModel%20.vb))
-<!-- default file list end -->
 
 ## Documentation
 
