@@ -20,3 +20,7 @@ This example demonstrates how you can use the [DialogService](https://docs.devex
 
 * [DialogService](https://docs.devexpress.com/WPF/17467/mvvm-framework/services/predefined-set/dialog-services/dialogservice)
 * [UI Services](https://docs.devexpress.com/WPF/17414/mvvm-framework/services)
+
+## More Examples
+
+* [WPF DialogService - Close an Opened Dialog and Specify the Dialog Result](https://github.com/DevExpress-Examples/wpf-dialogservice-close-opened-dialog-and-specify-dialog-result)
