@@ -26,7 +26,7 @@ This example demonstrates how you can use the [DialogService](https://docs.devex
 
 * [WPF DialogService - Close an Opened Dialog and Specify the Dialog Result](https://github.com/DevExpress-Examples/wpf-dialogservice-close-opened-dialog-and-specify-dialog-result)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-mvvm-framework-ui-services-dialogservice&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-mvvm-framework-ui-services-dialogservice&~~~was_helpful=no)
 
